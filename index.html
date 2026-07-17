@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Berlín · 25–28 jul 2026</title>
+<meta name="description" content="Guía de viaje a Berlín, 25-28 jul 2026: itinerario por días, restaurantes veganos verificados y reservas.">
+<meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101219" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Berlín">
+</head>
+<body>
+<style>
+  :root{
+    --bg:#FAF6EF; --surface:#FFFFFF; --surface-2:#F4EEE3; --surface-3:#EFE7D8;
+    --ink:#1B1E27; --ink-2:#5C616D; --ink-3:#8A8F9B;
+    --line:#E6DECF;
+    --accent:#DD6A2C; --accent-ink:#FFFFFF;
+    --vegan:#2F7D42; --vegan-bg:#E6F1E4; --vegan-line:#BCD9BC;
+    --navy:#1E2A44;
+    --shadow:0 1px 2px rgba(30,25,15,.05), 0 6px 22px rgba(30,25,15,.06);
+    --d1:#DD6A2C; --d2:#128C8A; --d3:#7A5CC0; --d4:#CE4235;
+    --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#101219; --surface:#191C25; --surface-2:#20242E; --surface-3:#272C37;
+      --ink:#ECE7DD; --ink-2:#9AA0AC; --ink-3:#6E747F;
+      --line:#2A2F3A;
+      --accent:#EE824C; --accent-ink:#1B1205;
+      --vegan:#7FC48D; --vegan-bg:#1B2A20; --vegan-line:#2E4633;
+      --navy:#B9C4DC;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 26px rgba(0,0,0,.36);
+      --d1:#EE824C; --d2:#3BB6B0; --d3:#9E86D8; --d4:#E4645A;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#FAF6EF; --surface:#FFFFFF; --surface-2:#F4EEE3; --surface-3:#EFE7D8;
+    --ink:#1B1E27; --ink-2:#5C616D; --ink-3:#8A8F9B; --line:#E6DECF;
+    --accent:#DD6A2C; --accent-ink:#FFFFFF;
+    --vegan:#2F7D42; --vegan-bg:#E6F1E4; --vegan-line:#BCD9BC; --navy:#1E2A44;
+    --shadow:0 1px 2px rgba(30,25,15,.05), 0 6px 22px rgba(30,25,15,.06);
+    --d1:#DD6A2C; --d2:#128C8A; --d3:#7A5CC0; --d4:#CE4235;
+  }
+  :root[data-theme="dark"]{
+    --bg:#101219; --surface:#191C25; --surface-2:#20242E; --surface-3:#272C37;
+    --ink:#ECE7DD; --ink-2:#9AA0AC; --ink-3:#6E747F; --line:#2A2F3A;
+    --accent:#EE824C; --accent-ink:#1B1205;
+    --vegan:#7FC48D; --vegan-bg:#1B2A20; --vegan-line:#2E4633; --navy:#B9C4DC;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 26px rgba(0,0,0,.36);
+    --d1:#EE824C; --d2:#3BB6B0; --d3:#9E86D8; --d4:#E4645A;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+    padding-bottom:calc(2rem + env(safe-area-inset-bottom));}
+  .wrap{max-width:640px;margin:0 auto;}
+
+  /* App bar */
+  .bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+    backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--line);}
+  .bar-in{max-width:640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+    gap:.75rem;padding:.7rem 1rem .55rem;}
+  .brand{display:flex;align-items:baseline;gap:.5rem;font-weight:800;letter-spacing:.02em;
+    font-size:1.28rem;}
+  .brand .dot{width:.52rem;height:.52rem;border-radius:50%;background:var(--accent);
+    display:inline-block;transform:translateY(-.05em);}
+  .brand small{font:600 .62rem/1 var(--mono);letter-spacing:.14em;color:var(--ink-2);
+    text-transform:uppercase;}
+  .veg-tag{font:700 .6rem/1 var(--mono);letter-spacing:.1em;color:var(--vegan);
+    background:var(--vegan-bg);border:1px solid var(--vegan-line);
+    padding:.34rem .5rem;border-radius:999px;white-space:nowrap;text-transform:uppercase;}
+
+  /* Day tabs */
+  .tabs{display:flex;gap:.4rem;overflow-x:auto;padding:.55rem 1rem;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);border-radius:.7rem;
+    padding:.4rem .62rem;cursor:pointer;color:var(--ink-2);min-width:3.5rem;text-align:center;
+    transition:transform .12s ease,border-color .12s ease;font-family:inherit;}
+  .tab:active{transform:scale(.96)}
+  .tab .dow{display:block;font:700 .62rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+  .tab .dnum{display:block;font-weight:800;font-size:1.12rem;color:var(--ink);margin-top:.1rem;
+    font-variant-numeric:tabular-nums;}
+  .tab[aria-selected="true"]{border-color:var(--tc);background:color-mix(in srgb,var(--tc) 12%,var(--surface));}
+  .tab[aria-selected="true"] .dnum{color:var(--tc)}
+  .tab .tline{height:3px;border-radius:2px;margin-top:.4rem;background:var(--tc);opacity:.85;}
+  .tab[aria-selected="false"] .tline{opacity:.18}
+  .tab.info .dnum{font-size:.95rem;letter-spacing:.02em;padding:.13rem 0}
+
+  /* Panels */
+  .panel{display:none;padding:1rem 1rem 0}
+  .panel.on{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.panel.on{animation:none}.tab:active{transform:none}}
+
+  /* Day header */
+  .dhead{background:var(--surface);border:1px solid var(--line);border-radius:1rem;
+    padding:1rem 1.05rem;box-shadow:var(--shadow);position:relative;overflow:hidden;}
+  .dhead::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--day);}
+  .dhead .kick{font:700 .66rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;
+    color:var(--day);}
+  .dhead h2{margin:.45rem 0 .3rem;font-size:1.32rem;line-height:1.18;letter-spacing:-.01em;
+    text-wrap:balance;font-weight:800;}
+  .dhead p{margin:0;color:var(--ink-2);font-size:.92rem;}
+  .hoods{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.7rem}
+  .hood{font:600 .68rem/1 var(--mono);letter-spacing:.04em;color:var(--ink-2);
+    background:var(--surface-2);border:1px solid var(--line);padding:.34rem .5rem;border-radius:.5rem;}
+
+  /* Timeline */
+  .tl{position:relative;margin-top:1rem}
+  .it{position:relative;padding:0 0 1.15rem 4.35rem;}
+  .it .time{position:absolute;left:0;top:.05rem;width:2.7rem;text-align:right;
+    font:600 .78rem/1.3 var(--mono);color:var(--ink-2);font-variant-numeric:tabular-nums;}
+  .it::before{content:"";position:absolute;left:3.16rem;top:.2rem;width:.72rem;height:.72rem;
+    border-radius:50%;background:var(--surface);border:2.5px solid var(--day);z-index:1;}
+  .it::after{content:"";position:absolute;left:calc(3.16rem + .29rem);top:.7rem;bottom:-.15rem;
+    width:2px;background:var(--day);opacity:.28;}
+  .it:last-child::after{display:none}
+  .it.meal::before{background:var(--day);}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:.85rem;
+    padding:.8rem .85rem;box-shadow:var(--shadow);}
+  .card.plain{background:transparent;border:none;box-shadow:none;padding:.1rem 0}
+  .card.plain .ct{font-size:.98rem}
+  .ct{font-weight:700;font-size:1.02rem;line-height:1.25;letter-spacing:-.01em;}
+  .csub{color:var(--ink-2);font-size:.9rem;margin-top:.25rem}
+  .badges{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0 .1rem}
+  .b{font:700 .62rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;
+    padding:.32rem .46rem;border-radius:.45rem;white-space:nowrap;}
+  .b.veg{color:var(--vegan);background:var(--vegan-bg);border:1px solid var(--vegan-line);}
+  .b.ok{color:var(--ink-2);background:var(--surface-2);border:1px solid var(--line);}
+  .b.free{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface));
+    border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));}
+  .meta{display:flex;flex-wrap:wrap;gap:.15rem .7rem;margin-top:.5rem;font-size:.84rem;color:var(--ink-2)}
+  .meta span{display:inline-flex;align-items:center;gap:.3rem}
+  .meta .lbl{font:700 .6rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+  .addr{font:500 .8rem/1.35 var(--mono);color:var(--ink-2);margin-top:.45rem;}
+
+  .actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.7rem}
+  a.btn{display:inline-flex;align-items:center;gap:.35rem;text-decoration:none;
+    font:700 .78rem/1 var(--sans);letter-spacing:.01em;padding:.5rem .7rem;border-radius:.55rem;
+    border:1px solid var(--line);color:var(--ink);background:var(--surface-2);
+    transition:transform .1s ease;}
+  a.btn:active{transform:scale(.97)}
+  a.btn .ic{font:700 .8rem/1 var(--mono);color:var(--accent)}
+  a.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+  a.btn.primary .ic{color:var(--accent-ink)}
+  a.btn:focus-visible,.tab:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
+
+  .callout{margin-top:.6rem;background:color-mix(in srgb,var(--accent) 9%,var(--surface));
+    border:1px solid color-mix(in srgb,var(--accent) 28%,var(--line));border-radius:.6rem;
+    padding:.6rem .7rem;font-size:.84rem;color:var(--ink);}
+  .callout b{color:var(--accent);font:800 .64rem/1 var(--mono);letter-spacing:.1em;
+    text-transform:uppercase;display:block;margin-bottom:.25rem}
+
+  /* Info panel */
+  .isec{background:var(--surface);border:1px solid var(--line);border-radius:1rem;
+    padding:1rem 1.05rem;box-shadow:var(--shadow);margin-bottom:.9rem;}
+  .isec h3{margin:0 0 .2rem;font-size:1.05rem;letter-spacing:-.01em;font-weight:800}
+  .isec h3 .k{font:700 .6rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);display:block;margin-bottom:.35rem}
+  .irow{padding:.7rem 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--ink-2)}
+  .irow:first-of-type{border-top:none}
+  .irow b{color:var(--ink);font-weight:700}
+  .irow .sub{display:block;margin-top:.15rem}
+  .rest{display:flex;justify-content:space-between;gap:.6rem;align-items:baseline}
+  .rest .rn{color:var(--ink);font-weight:700;font-size:.95rem}
+  .rest .ra{font:500 .74rem/1.3 var(--mono);color:var(--ink-3);text-align:right;flex:0 0 auto;max-width:48%}
+  .note{font-size:.82rem;color:var(--ink-3);padding:.2rem 1rem 0;text-align:center;line-height:1.5}
+  .hr-note{text-align:center;color:var(--ink-3);font:600 .7rem/1.4 var(--mono);
+    letter-spacing:.04em;padding:1.4rem 1rem .4rem}
+  .foot{padding:1.6rem 1.2rem 0;color:var(--ink-3);font-size:.78rem;text-align:center;line-height:1.6}
+</style>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="brand">BERLÍN<span class="dot"></span> <small>25–28 jul 2026</small></div>
+    <span class="veg-tag">Vegano</span>
+  </div>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Días del viaje"></div>
+</div>
+
+<div class="wrap" id="panels"></div>
+
+<div class="foot">
+  Plan basado en el itinerario de tus amigas, adaptado a tus fechas y a verano (sin mercado navideño).<br>
+  Restaurantes comprobados el 16 jul 2026: todos abiertos y veganos o con opción vegana.<br>
+  Consejo: en el móvil, "Añadir a pantalla de inicio" y lo tienes como una app.
+</div>
+
+<script>
+const M = "https://www.google.com/maps/search/?api=1&query=";
+const map = q => M + encodeURIComponent(q + ", Berlin");
+
+const days = [
+  { dow:"Sáb", num:"25", color:"--d1", kick:"Día 1 · Sábado 25 jul",
+    title:"Llegada, Friedrichshain y el kebab",
+    summary:"Aterrizas a las 9:00. Dejas las maletas y arrancas suave por el barrio más cañero del este, con el döner vegano obligatorio de remate.",
+    hoods:["Friedrichshain"],
+    items:[
+      { time:"09:00", kind:"move", title:"Aterrizaje en BER",
+        sub:"Aeropuerto Berlín Brandenburg. Tren al centro: FEX o S9 (unos 45 min). Billete zona ABC.",
+        map:"Flughafen BER Terminal 1 Bahnhof" },
+      { time:"11:00", kind:"move", title:"Check-in en el hotel",
+        sub:"Sheraton Berlin Grand Hotel Esplanade, en Tiergarten junto al canal (cerca de Potsdamer Platz y Nollendorfplatz). Dejáis las maletas aunque la habitación no esté lista todavía.",
+        addr:"Lützowufer 15, 10785 Berlin",
+        map:"Sheraton Berlin Grand Hotel Esplanade Lützowufer 15" },
+      { time:"13:30", kind:"meal", title:"Veg'd", veg:"100% vegano", verified:true,
+        cuisine:"Hamburguesas", hours:"12:00–21:00", addr:"Boxhagener Str. 21",
+        sub:"Comida. De las mejores hamburguesas veganas de Berlín, informal y perfecto para llegar.",
+        map:"Veg'd Boxhagener Strasse 21" },
+      { time:"15:00", kind:"see", title:"East Side Gallery", free:true,
+        sub:"1,3 km del Muro pintado al aire libre, gratis. Paseo por Warschauer Str. y el RAW-Gelände.",
+        map:"East Side Gallery" },
+      { time:"17:00", kind:"see", title:"Tardeo en Boxhagener Platz",
+        sub:"El corazón de Friedrichshain: cafés, terrazas y tiendas. El barrio chulito para tardear.",
+        map:"Boxhagener Platz" },
+      { time:"20:30", kind:"meal", title:"Vöner — EL KEBAB", veg:"100% vegano", verified:true,
+        cuisine:"Döner", hours:"12:00–23:00", addr:"Boxhagener Str. 56",
+        sub:"Cena. El döner vegano original de Berlín desde 2006. El que dijo Paula, sí o sí.",
+        map:"Vöner Boxhagener Strasse 56" },
+      { time:"22:00", kind:"see", title:"Copas por Friedrichshain",
+        sub:"Bares alrededor de Boxhagener Platz y del RAW-Gelände." }
+    ]},
+
+  { dow:"Dom", num:"26", color:"--d2", kick:"Día 2 · Domingo 26 jul",
+    title:"Centro histórico, Reichstag e Isla de los Museos",
+    summary:"El gran día del centro. Es domingo, así que los museos abren. La cúpula del Parlamento (reserva antes), la ruta clásica a pie y la Isla de los Museos.",
+    hoods:["Mitte"],
+    items:[
+      { time:"09:30", kind:"see", title:"Cúpula del Reichstag (Parlamento)", free:true,
+        sub:"Sube a la cúpula de cristal de Norman Foster. Trae el mismo DNI o pasaporte con el que reservaste.",
+        map:"Reichstag Bundestag", book:"https://visite.bundestag.de", bookLabel:"Reservar (gratis)",
+        callout:{t:"Reserva imprescindible", d:"Gratis en visite.bundestag.de. En verano las plazas vuelan: reserva cuanto antes. Sin reserva solo entras si quedan huecos en el centro de visitantes."} },
+      { time:"10:45", kind:"see", title:"Puerta de Brandeburgo",
+        sub:"El símbolo de la ciudad, a un paseo del Reichstag.", map:"Brandenburger Tor" },
+      { time:"11:15", kind:"see", title:"Memorial del Holocausto",
+        sub:"Monumento a los judíos de Europa asesinados. Al lado, el aparcamiento sobre el búnker de Hitler (solo una placa).",
+        map:"Denkmal für die ermordeten Juden Europas" },
+      { time:"12:00", kind:"see", title:"Topografía del Terror", free:true,
+        sub:"Museo al aire libre en la antigua sede de la Gestapo y las SS, gratis, junto a un tramo del Muro.",
+        map:"Topographie des Terrors" },
+      { time:"12:45", kind:"see", title:"Checkpoint Charlie",
+        sub:"El antiguo paso fronterizo. Rápido y muy turístico, pero de paso.", map:"Checkpoint Charlie" },
+      { time:"14:00", kind:"meal", title:"Shisomen", veg:"100% vegano", verified:true,
+        cuisine:"Ramen japonés", hours:"dom 13:00–22:00", addr:"Gertrud-Kolmar-Str. 4",
+        sub:"Comida. Ramen vegano y cócteles, muy cerca del centro.",
+        map:"Shisomen Gertrud-Kolmar-Strasse 4" },
+      { time:"15:30", kind:"see", title:"Gendarmenmarkt y Bebelplatz",
+        sub:"La plaza más bonita de Berlín y, cerca, la de la quema de libros de 1933.", map:"Gendarmenmarkt" },
+      { time:"16:30", kind:"see", title:"Unter den Linden hasta la Catedral",
+        sub:"El bulevar clásico hasta el Berliner Dom y la Isla de los Museos.", map:"Berliner Dom" },
+      { time:"17:00", kind:"see", title:"Isla de los Museos",
+        sub:"Elige uno: Neues Museum (busto de Nefertiti) o Alte Nationalgalerie. Abren hasta las 18:00. Ojo: el Pergamon está cerrado por reformas hasta 2027.",
+        map:"Museumsinsel Berlin" },
+      { time:"19:00", kind:"see", title:"Tiergarten (opcional)",
+        sub:"Paseo por el gran parque y la Columna de la Victoria. En julio atardece tardísimo.",
+        map:"Tiergarten Berlin" },
+      { time:"20:30", kind:"meal", title:"1990 Vegan Living", veg:"100% vegano", verified:true,
+        cuisine:"Vietnamita", hours:"~12:00–23:30", addr:"Krossener Str. 19",
+        sub:"Cena. Vietnamita 100% vegano, de sentarse a gusto, de vuelta por Friedrichshain.",
+        map:"1990 Vegan Living Krossener Strasse 19" }
+    ]},
+
+  { dow:"Lun", num:"27", color:"--d3", kick:"Día 3 · Lunes 27 jul",
+    title:"Berlín subterráneo y Kreuzberg",
+    summary:"Los lunes cierran los museos de la Isla, así que es el día ideal para el tour subterráneo y para tardear por Kreuzberg, el barrio más alternativo.",
+    hoods:["Gesundbrunnen","Kreuzberg"],
+    items:[
+      { time:"11:00", kind:"see", title:"Berliner Unterwelten (tour subterráneo)",
+        sub:"El Berlín de debajo: búnkeres de la 2ª Guerra Mundial. Tour en inglés, unos 16€. Punto de encuentro en la estación Gesundbrunnen (Brunnenstr. 105).",
+        map:"Berliner Unterwelten Brunnenstrasse 105", book:"https://www.berliner-unterwelten.de/en/", bookLabel:"Reservar entrada",
+        callout:{t:"Reserva antes", d:"Solo venta online, hasta 30 días antes, sin taquilla en el punto de encuentro. Elige uno de los tours en inglés (Tour 1 Dark Worlds es el clásico)."} },
+      { time:"13:30", kind:"meal", title:"Dumplings Nian", veg:"Opción vegana", verified:true,
+        cuisine:"Dumplings", hours:"12:00–23:00", addr:"Eisenbahnstr. 4",
+        sub:"Comida. Dumplings y stone pot con versión vegana (9€), pegado a la Markthalle Neun.",
+        map:"Dumplings Nian Eisenbahnstrasse 4" },
+      { time:"14:30", kind:"see", title:"Markthalle Neun y el canal",
+        sub:"Mercado histórico (lunes a sábado) y paseo por el Landwehrkanal y el Paul-Lincke-Ufer.",
+        map:"Markthalle Neun" },
+      { time:"16:00", kind:"see", title:"Kreuzberg para tardear",
+        sub:"Bergmannkiez, Görlitzer Park y las calles turcas. El barrio alternativo por excelencia.",
+        map:"Bergmannstrasse Kreuzberg" },
+      { time:"20:30", kind:"meal", title:"Secret Garden", veg:"100% vegano", verified:true,
+        cuisine:"Sushi vegano", hours:"noche", addr:"Warschauer Str. 33",
+        sub:"Cena. Sushi vegano creativo (salmón de zanahoria, atún de tofu), encima del súper Veganz.",
+        map:"Secret Garden vegan sushi Warschauer Strasse 33" }
+    ]},
+
+  { dow:"Mar", num:"28", color:"--d4", kick:"Día 4 · Martes 28 jul",
+    title:"Brunch y salida",
+    summary:"El vuelo sale a las 16:50, así que solo tienes la mañana. Un brunch tranquilo y al aeropuerto sin prisas.",
+    hoods:["Kreuzberg"],
+    items:[
+      { time:"10:00", kind:"meal", title:"Vegan Backyard", veg:"100% vegano", verified:true,
+        cuisine:"Brunch", hours:"mañana", addr:"Fichtestr. 3",
+        sub:"Brunch. 100% vegano, con terraza. Buen cierre antes del vuelo (puede llenarse, id pronto).",
+        map:"Vegan Backyard Fichtestrasse 3" },
+      { time:"11:30", kind:"see", title:"Último paseo o compras",
+        sub:"Vuelta tranquila por el barrio, algún souvenir y a por la maleta." },
+      { time:"13:15", kind:"move", title:"Check-out y al aeropuerto",
+        sub:"Recoger las maletas en el Sheraton y a BER en tren FEX o S9 (45–60 min). Billete zona ABC.",
+        map:"Flughafen BER Terminal 1 Bahnhof",
+        callout:{t:"Margen", d:"Estar en BER sobre las 14:50, unas 2 horas antes del vuelo de las 16:50."} },
+      { time:"16:50", kind:"move", title:"Vuelo de salida",
+        sub:"¡Buen viaje de vuelta!" }
+    ]}
+];
+
+function badgeRow(it){
+  let b="";
+  if(it.veg){ const opt=/opci/i.test(it.veg); b+=`<span class="b veg">${opt?"◐":"✓"} ${it.veg}</span>`; }
+  if(it.verified) b+=`<span class="b ok">✓ Verificado</span>`;
+  if(it.free) b+=`<span class="b free">Gratis</span>`;
+  return b?`<div class="badges">${b}</div>`:"";
+}
+function metaRow(it){
+  const p=[];
+  if(it.cuisine) p.push(`<span><span class="lbl">Tipo</span> ${it.cuisine}</span>`);
+  if(it.hours) p.push(`<span><span class="lbl">Horario</span> ${it.hours}</span>`);
+  return p.length?`<div class="meta">${p.join("")}</div>`:"";
+}
+function actions(it){
+  let a="";
+  if(it.book) a+=`<a class="btn primary" href="${it.book}" target="_blank" rel="noopener"><span class="ic">↗</span>${it.bookLabel||"Reservar"}</a>`;
+  if(it.map) a+=`<a class="btn" href="${map(it.map)}" target="_blank" rel="noopener"><span class="ic">◎</span>Mapa</a>`;
+  return a?`<div class="actions">${a}</div>`:"";
+}
+function itemHTML(it){
+  const meal = it.kind==="meal";
+  const plain = it.kind!=="meal" && !it.callout && !it.map && !it.book;
+  const inner = `
+    <div class="ct">${it.title}</div>
+    ${badgeRow(it)}
+    ${it.sub?`<div class="csub">${it.sub}</div>`:""}
+    ${metaRow(it)}
+    ${it.addr?`<div class="addr">${it.addr}</div>`:""}
+    ${it.callout?`<div class="callout"><b>${it.callout.t}</b>${it.callout.d}</div>`:""}
+    ${actions(it)}`;
+  return `<div class="it ${meal?"meal":""}">
+      <div class="time">${it.time}</div>
+      <div class="card ${plain?"plain":""}">${inner}</div>
+    </div>`;
+}
+
+const tabsEl=document.getElementById("tabs");
+const panelsEl=document.getElementById("panels");
+
+days.forEach((d,i)=>{
+  const t=document.createElement("button");
+  t.className="tab"; t.setAttribute("role","tab");
+  t.setAttribute("aria-selected", i===0?"true":"false");
+  t.setAttribute("aria-controls","p"+i);
+  t.style.setProperty("--tc",`var(${d.color})`);
+  t.innerHTML=`<span class="dow">${d.dow}</span><span class="dnum">${d.num}</span><span class="tline"></span>`;
+  t.addEventListener("click",()=>select(i));
+  tabsEl.appendChild(t);
+
+  const p=document.createElement("section");
+  p.className="panel"+(i===0?" on":""); p.id="p"+i; p.setAttribute("role","tabpanel");
+  p.style.setProperty("--day",`var(${d.color})`);
+  p.innerHTML=`
+    <div class="dhead">
+      <div class="kick">${d.kick}</div>
+      <h2>${d.title}</h2>
+      <p>${d.summary}</p>
+      <div class="hoods">${d.hoods.map(h=>`<span class="hood">${h}</span>`).join("")}</div>
+    </div>
+    <div class="tl">${d.items.map(itemHTML).join("")}</div>`;
+  panelsEl.appendChild(p);
+});
+
+// Info tab
+const infoTab=document.createElement("button");
+infoTab.className="tab info"; infoTab.setAttribute("role","tab");
+infoTab.setAttribute("aria-selected","false"); infoTab.setAttribute("aria-controls","pinfo");
+infoTab.style.setProperty("--tc","var(--accent)");
+infoTab.innerHTML=`<span class="dow">Info</span><span class="dnum">Práctico</span><span class="tline"></span>`;
+infoTab.addEventListener("click",()=>select(days.length));
+tabsEl.appendChild(infoTab);
+
+const rests=[
+  ["Vöner","Boxhagener Str. 56"],["Veg'd","Boxhagener Str. 21"],
+  ["1990 Vegan Living","Krossener Str. 19"],["Secret Garden","Warschauer Str. 33"],
+  ["Shisomen","Gertrud-Kolmar-Str. 4"],["Dumplings Nian","Eisenbahnstr. 4"],
+  ["Vegan Backyard","Fichtestr. 3"],["Vamos Veganos","Schönfließer Str. 16"]
+];
+const info=document.createElement("section");
+info.className="panel"; info.id="pinfo"; info.setAttribute("role","tabpanel");
+info.innerHTML=`
+  <div class="isec">
+    <h3><span class="k">Alojamiento</span>Vuestro hotel</h3>
+    <div class="irow"><b>Sheraton Berlin Grand Hotel Esplanade</b>
+      <span class="sub">Lützowufer 15, 10785 Berlin. En Tiergarten, junto al Landwehrkanal, cerca de Potsdamer Platz. Estaciones más cercanas: Kurfürstenstraße (U1/U3) y Nollendorfplatz.</span></div>
+    <div class="actions"><a class="btn primary" href="${map("Sheraton Berlin Grand Hotel Esplanade Lützowufer 15")}" target="_blank" rel="noopener"><span class="ic">◎</span>Abrir en mapa</a></div>
+  </div>
+
+  <div class="isec">
+    <h3><span class="k">Reservar antes de ir</span>Dos cosas con reserva</h3>
+    <div class="irow"><b>Cúpula del Reichstag</b> · gratis
+      <span class="sub">visite.bundestag.de. Reserva cuanto antes (en verano vuela) y lleva el DNI o pasaporte exacto de la reserva.</span></div>
+    <div class="irow"><b>Berliner Unterwelten</b> · ~16€
+      <span class="sub">berliner-unterwelten.de. Solo online, tour en inglés, punto de encuentro en Gesundbrunnen.</span></div>
+  </div>
+
+  <div class="isec">
+    <h3><span class="k">Transporte</span>Moverse por Berlín</h3>
+    <div class="irow"><b>Aeropuerto (BER) al centro</b>
+      <span class="sub">Tren FEX (a Hauptbahnhof) o S9 / S45. Unos 45 min. Billete zona ABC (~4,70€).</span></div>
+    <div class="irow"><b>Por la ciudad</b>
+      <span class="sub">U-Bahn, S-Bahn y tranvía. Billete zona AB o la Berlin WelcomeCard (transporte + descuentos). App útil: BVG Fahrinfo. No hace falta coche.</span></div>
+  </div>
+
+  <div class="isec">
+    <h3><span class="k">Comprobados · 16 jul 2026</span>Restaurantes (todos veganos o con opción)</h3>
+    ${rests.map(r=>`<div class="irow rest"><span class="rn">${r[0]}</span><span class="ra">${r[1]}</span></div>`).join("")}
+  </div>
+
+  <div class="isec">
+    <h3><span class="k">Extra</span>Alternativas por si acaso</h3>
+    <div class="irow"><b>Vamos Veganos</b> (Prenzlauer Berg)
+      <span class="sub">Otro döner vegano ("Fiöner"). Horario corto: mar-vie 12–15, jue-dom 17–21. Cerrado los lunes.</span></div>
+    <div class="irow"><b>Free tour a pie en español</b>
+      <span class="sub">Alternativa para el día del centro si preferís guía (Civitatis).</span></div>
+    <div class="irow"><b>Jardín Botánico</b>
+      <span class="sub">Si sobra tiempo y hace bueno, un plan de tarde en verano.</span></div>
+  </div>
+
+  <div class="isec">
+    <h3><span class="k">De Paula</span>Lo acordado</h3>
+    <div class="irow">Kebab sí o sí (Vöner). Centro con Parlamento gratis y tour subterráneo. Un barrio chulito para tardear (Friedrichshain y Kreuzberg). Sin campo de concentración, Sachsenhausen queda fuera.</div>
+  </div>`;
+panelsEl.appendChild(info);
+
+const tabs=[...tabsEl.querySelectorAll(".tab")];
+const panels=[...panelsEl.querySelectorAll(".panel")];
+function select(i){
+  tabs.forEach((t,k)=>t.setAttribute("aria-selected", k===i?"true":"false"));
+  panels.forEach((p,k)=>p.classList.toggle("on", k===i));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});
+}
+</script>
+</body>
+</html>
