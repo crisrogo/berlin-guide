@@ -238,31 +238,31 @@ const days = [
 
   { dow:"Dom", num:"26", color:"--d2", kick:"Día 2 · Domingo 26 jul",
     title:"Centro histórico, Reichstag e Isla de los Museos",
-    summary:"El gran día del centro. Es domingo, así que los museos abren. La cúpula del Parlamento (reserva antes), la ruta clásica a pie y la Isla de los Museos.",
+    summary:"El gran día del centro. Por la mañana la ruta clásica a pie y a las 13:15 la cúpula del Parlamento (por la mañana ya no quedan plazas). Después, comida junto al Reichstag y la Isla de los Museos.",
     hoods:["Mitte"],
     items:[
-      { time:"09:30", kind:"see", title:"Cúpula del Reichstag (Parlamento)", free:true,
-        sub:"Sube a la cúpula de cristal de Norman Foster. Trae el mismo DNI o pasaporte con el que reservaste.",
-        map:"Reichstag Bundestag", book:"https://visite.bundestag.de", bookLabel:"Reservar (gratis)",
-        callout:{t:"Reserva imprescindible", d:"Gratis en visite.bundestag.de. En verano las plazas vuelan: reserva cuanto antes. Sin reserva solo entras si quedan huecos en el centro de visitantes."} },
-      { time:"10:45", kind:"see", title:"Puerta de Brandeburgo",
-        sub:"El símbolo de la ciudad, a un paseo del Reichstag.", map:"Brandenburger Tor" },
-      { time:"11:15", kind:"see", title:"Memorial del Holocausto",
-        sub:"Monumento a los judíos de Europa asesinados. Al lado, el aparcamiento sobre el búnker de Hitler (solo una placa).",
-        map:"Denkmal für die ermordeten Juden Europas" },
-      { time:"12:00", kind:"see", title:"Topografía del Terror", free:true,
+      { time:"09:30", kind:"see", title:"Gendarmenmarkt y Bebelplatz",
+        sub:"Empieza por la plaza más bonita de Berlín y, al lado, la de la quema de libros de 1933.", map:"Gendarmenmarkt" },
+      { time:"10:30", kind:"see", title:"Checkpoint Charlie",
+        sub:"El antiguo paso fronterizo. Rápido y muy turístico, pero de paso.", map:"Checkpoint Charlie" },
+      { time:"11:00", kind:"see", title:"Topografía del Terror", free:true,
         sub:"Museo al aire libre en la antigua sede de la Gestapo y las SS, gratis, junto a un tramo del Muro.",
         map:"Topographie des Terrors" },
-      { time:"12:45", kind:"see", title:"Checkpoint Charlie",
-        sub:"El antiguo paso fronterizo. Rápido y muy turístico, pero de paso.", map:"Checkpoint Charlie" },
-      { time:"14:00", kind:"meal", title:"Shisomen", veg:"100% vegano", verified:true,
+      { time:"12:15", kind:"see", title:"Memorial del Holocausto",
+        sub:"Monumento a los judíos de Europa asesinados. Al lado, el aparcamiento sobre el búnker de Hitler (solo una placa).",
+        map:"Denkmal für die ermordeten Juden Europas" },
+      { time:"12:45", kind:"see", title:"Puerta de Brandeburgo",
+        sub:"El símbolo de la ciudad, de camino al Reichstag. Foto rápida y a la cúpula.", map:"Brandenburger Tor" },
+      { time:"13:15", kind:"see", title:"Cúpula del Reichstag (Parlamento)", free:true,
+        sub:"Sube a la cúpula de cristal de Norman Foster. Preséntate en el acceso unos 15–20 min antes con el mismo DNI o pasaporte de la reserva.",
+        map:"Reichstag Bundestag", book:"https://visite.bundestag.de", bookLabel:"Reservar (gratis)",
+        callout:{t:"Ojo con el turno", d:"El domingo por la mañana ya no quedan plazas: reserva el turno de las 13:15 (hay huecos de 13:15 a 16:15). Si se agotara, plan B: lunes desde las 8:00, antes del tour subterráneo."} },
+      { time:"14:45", kind:"meal", title:"Shisomen", veg:"100% vegano", verified:true,
         cuisine:"Ramen japonés", hours:"dom 13:00–22:00", addr:"Gertrud-Kolmar-Str. 4",
-        sub:"Comida. Ramen vegano y cócteles, muy cerca del centro.",
+        sub:"Comida tras la cúpula. Ramen vegano y cócteles, a 5 min andando del Reichstag.",
         map:"Shisomen Gertrud-Kolmar-Strasse 4" },
-      { time:"15:30", kind:"see", title:"Gendarmenmarkt y Bebelplatz",
-        sub:"La plaza más bonita de Berlín y, cerca, la de la quema de libros de 1933.", map:"Gendarmenmarkt" },
-      { time:"16:30", kind:"see", title:"Unter den Linden hasta la Catedral",
-        sub:"El bulevar clásico hasta el Berliner Dom y la Isla de los Museos.", map:"Berliner Dom" },
+      { time:"16:15", kind:"see", title:"Unter den Linden hasta la Catedral",
+        sub:"El bulevar clásico desde la Puerta de Brandeburgo hasta el Berliner Dom y la Isla de los Museos.", map:"Berliner Dom" },
       { time:"17:00", kind:"see", title:"Isla de los Museos",
         sub:"Elige uno: Neues Museum (busto de Nefertiti) o Alte Nationalgalerie. Abren hasta las 18:00. Ojo: el Pergamon está cerrado por reformas hasta 2027.",
         map:"Museumsinsel Berlin" },
@@ -414,7 +414,7 @@ info.innerHTML=`
   <div class="isec">
     <h3><span class="k">Reservar antes de ir</span>Dos cosas con reserva</h3>
     <div class="irow"><b>Cúpula del Reichstag</b> · gratis
-      <span class="sub">visite.bundestag.de. Reserva cuanto antes (en verano vuela) y lleva el DNI o pasaporte exacto de la reserva.</span></div>
+      <span class="sub">visite.bundestag.de. El domingo por la mañana está agotado: reserva el turno del domingo a las 13:15 (quedan plazas de 13:15 a 16:15). Otras opciones si hiciera falta: sáb 14:30–16:30, lun 8:00–16:45, mar 8:00–18:30. Lleva el DNI o pasaporte exacto de la reserva.</span></div>
     <div class="irow"><b>Berliner Unterwelten</b> · ~16€
       <span class="sub">berliner-unterwelten.de. Solo online, tour en inglés, punto de encuentro en Gesundbrunnen.</span></div>
   </div>
