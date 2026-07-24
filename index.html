@@ -194,7 +194,7 @@
 
 <div class="foot">
   Plan basado en el itinerario de tus amigas, adaptado a tus fechas y a verano (sin mercado navideño).<br>
-  Restaurantes comprobados el 16 jul 2026: todos abiertos y veganos o con opción vegana.<br>
+  Restaurantes comprobados en julio de 2026: todos abiertos y veganos o con opción vegana.<br>
   Consejo: en el móvil, "Añadir a pantalla de inicio" y lo tienes como una app.
 </div>
 
@@ -205,13 +205,17 @@ const map = q => M + encodeURIComponent(q + ", Berlin");
 const days = [
   { dow:"Sáb", num:"25", color:"--d1", kick:"Día 1 · Sábado 25 jul",
     title:"Llegada, Friedrichshain y el kebab",
-    summary:"Aterrizas a las 9:00. Dejas las maletas y arrancas suave por el barrio más cañero del este, con el döner vegano obligatorio de remate.",
+    summary:"Aterrizas a las 9:00 y desayunas donuts veganos al bajar del tren. Dejas las maletas y arrancas suave por el barrio más cañero del este, con el döner vegano obligatorio de remate.",
     hoods:["Friedrichshain"],
     items:[
       { time:"09:00", kind:"move", title:"Aterrizaje en BER",
         sub:"Aeropuerto Berlín Brandenburg. Tren al centro: FEX o S9 (unos 45 min). Billete zona ABC.",
         map:"Flughafen BER Terminal 1 Bahnhof" },
-      { time:"11:00", kind:"move", title:"Check-in en el hotel",
+      { time:"10:15", kind:"meal", title:"Brammibal's Donuts (Hauptbahnhof)", veg:"100% vegano", verified:true,
+        cuisine:"Donuts y café", hours:"8:00–21:00", addr:"Europaplatz 1, Hauptbahnhof",
+        sub:"Desayuno al bajar del tren: los donuts veganos más famosos de Berlín, en la planta baja de la estación. Café con leche de avena y a por el día.",
+        map:"Brammibals Donuts Hauptbahnhof Europaplatz 1" },
+      { time:"11:30", kind:"move", title:"Check-in en el hotel",
         sub:"Sheraton Berlin Grand Hotel Esplanade, en Tiergarten junto al canal (cerca de Potsdamer Platz y Nollendorfplatz). Dejáis las maletas aunque la habitación no esté lista todavía.",
         addr:"Lützowufer 15, 10785 Berlin",
         map:"Sheraton Berlin Grand Hotel Esplanade Lützowufer 15" },
@@ -241,7 +245,11 @@ const days = [
     summary:"El gran día del centro. Por la mañana la ruta clásica a pie y a las 13:15 la cúpula del Parlamento (por la mañana ya no quedan plazas). Después, comida junto al Reichstag y la Isla de los Museos.",
     hoods:["Mitte"],
     items:[
-      { time:"09:30", kind:"see", title:"Gendarmenmarkt y Bebelplatz",
+      { time:"09:00", kind:"meal", title:"Brammibal's Donuts (Potsdamer Platz)", veg:"100% vegano", verified:true,
+        cuisine:"Donuts y café", hours:"dom 9:00–21:00", addr:"Alte Potsdamer Str. 7",
+        sub:"Desayuno rápido a 15 min a pie del hotel (o U2 desde Nollendorfplatz). Después, U2 directo de Potsdamer Platz a Stadtmitte para empezar la ruta.",
+        map:"Brammibals Donuts Alte Potsdamer Strasse 7" },
+      { time:"09:45", kind:"see", title:"Gendarmenmarkt y Bebelplatz",
         sub:"Empieza por la plaza más bonita de Berlín y, al lado, la de la quema de libros de 1933.", map:"Gendarmenmarkt" },
       { time:"10:30", kind:"see", title:"Checkpoint Charlie",
         sub:"El antiguo paso fronterizo. Rápido y muy turístico, pero de paso.", map:"Checkpoint Charlie" },
@@ -280,6 +288,10 @@ const days = [
     summary:"Los lunes cierran los museos de la Isla, así que es el día ideal para el tour subterráneo (10:30, en castellano) y para tardear por Kreuzberg, el barrio más alternativo.",
     hoods:["Gesundbrunnen","Kreuzberg"],
     items:[
+      { time:"09:00", kind:"meal", title:"Frühstück 3000", veg:"Opción vegana", verified:true,
+        cuisine:"Desayunos", hours:"9:00–16:00", addr:"Bülowstr. 101",
+        sub:"Desayuno de sentarse a 10 min a pie del hotel, con platos veganos en carta. Pedid al llegar: a las 9:45 toca salir (U2 en Bülowstraße hasta Potsdamer Platz y S1/S2 a Gesundbrunnen).",
+        map:"Frühstück 3000 Bülowstrasse 101" },
       { time:"10:30", kind:"see", title:"Berliner Unterwelten (tour subterráneo)",
         sub:"El Berlín de debajo: búnkeres de la 2ª Guerra Mundial. Tour «Mundos oscuros» con guía en español (~90 min), unos 16€. Punto de encuentro en la estación Gesundbrunnen (Brunnenstr. 105). Llegad 15 min antes.",
         map:"Berliner Unterwelten Brunnenstrasse 105", book:"https://www.berliner-unterwelten.de/en/", bookLabel:"Reservar entrada",
@@ -310,7 +322,7 @@ const days = [
     items:[
       { time:"10:00", kind:"meal", title:"Vegan Backyard", veg:"100% vegano", verified:true,
         cuisine:"Brunch", hours:"mañana", addr:"Fichtestr. 3",
-        sub:"Brunch. 100% vegano, con terraza. Buen cierre antes del vuelo (puede llenarse, id pronto).",
+        sub:"Desayuno-brunch. 100% vegano, con terraza. Buen cierre antes del vuelo (puede llenarse, id pronto).",
         map:"Vegan Backyard Fichtestrasse 3" },
       { time:"11:30", kind:"see", title:"Último paseo o compras",
         sub:"Vuelta tranquila por el barrio, algún souvenir y a por la maleta." },
@@ -318,6 +330,9 @@ const days = [
         sub:"Recoger las maletas en el Sheraton y a BER en tren FEX o S9 (45–60 min). Billete zona ABC.",
         map:"Flughafen BER Terminal 1 Bahnhof",
         callout:{t:"Margen", d:"Estar en BER sobre las 14:50, unas 2 horas antes del vuelo de las 16:50."} },
+      { time:"15:15", kind:"meal", title:"Brammibal's Donuts (BER)", veg:"100% vegano", verified:true,
+        cuisine:"Donuts y café", hours:"5:00–19:00", addr:"Terminal 1, tras el control",
+        sub:"El último donut: la tienda del aeropuerto está en la zona de embarque de la Terminal 1 (abrió en junio de 2026). Merienda vegana mientras esperáis el vuelo." },
       { time:"16:50", kind:"move", title:"Vuelo de salida",
         sub:"¡Buen viaje de vuelta!" }
     ]}
@@ -399,7 +414,9 @@ const rests=[
   ["Vöner","Boxhagener Str. 56"],["Veg'd","Boxhagener Str. 21"],
   ["1990 Vegan Living","Krossener Str. 19"],["Secret Garden","Warschauer Str. 33"],
   ["Shisomen","Gertrud-Kolmar-Str. 4"],["Dumplings Nian","Eisenbahnstr. 4"],
-  ["Vegan Backyard","Fichtestr. 3"],["Vamos Veganos","Schönfließer Str. 16"]
+  ["Vegan Backyard","Fichtestr. 3"],["Vamos Veganos","Schönfließer Str. 16"],
+  ["Brammibal's Donuts","Hauptbahnhof · Potsdamer Platz · BER"],
+  ["Frühstück 3000","Bülowstr. 101"]
 ];
 const info=document.createElement("section");
 info.className="panel"; info.id="pinfo"; info.setAttribute("role","tabpanel");
@@ -428,7 +445,7 @@ info.innerHTML=`
   </div>
 
   <div class="isec">
-    <h3><span class="k">Comprobados · 16 jul 2026</span>Restaurantes (todos veganos o con opción)</h3>
+    <h3><span class="k">Comprobados · jul 2026</span>Restaurantes (todos veganos o con opción)</h3>
     ${rests.map(r=>`<div class="irow rest"><span class="rn">${r[0]}</span><span class="ra">${r[1]}</span></div>`).join("")}
   </div>
 
